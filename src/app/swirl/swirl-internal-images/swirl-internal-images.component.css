@@ -1,0 +1,54 @@
+
+#image {
+  animation: zoomin 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: contain;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+  overflow-scrolling: unset;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  100% {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    overflow: hidden;
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  /**
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+**/
+
+  100% {
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+    overflow: hidden;
+  }
+}

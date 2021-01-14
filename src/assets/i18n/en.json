@@ -1,0 +1,10 @@
+{
+  "PAGES": {
+      "HOME": {
+          "APP_NAME": "Fractal",
+          "NEW_PROJECT": "New Project",
+          "OPEN_PROJECT": "Open Project",
+          "CREDITS": "Credits"
+      }
+  }
+}
