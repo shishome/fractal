@@ -2,6 +2,8 @@
 
 [![Make a pull request][prs-badge]][prs]
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
+![Build][travis]
+![Maintained][maintained-badge]
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
@@ -20,6 +22,7 @@ Everyone is welcome to contribute. As the project gets bigger there will be a li
 * Clone the repo and run ```npm i```
 * ```npm run start```
 
+[travis]: https://www.travis-ci.com/shishome/fractal.svg?branch=master
 [license-badge]: https://img.shields.io/badge/license-Apache2-blue.svg?style=style=flat-square
 [license]: https://github.com/shishome/fractal/blob/master/LICENSE.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square

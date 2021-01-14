@@ -8,9 +8,9 @@ matrix:
         - ELECTRON_CACHE=$HOME/.cache/electron
         - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
 
-    - os: linux
-      services: docker
-      language: generic
+    #- os: linux
+    #  services: docker
+    #  language: generic
 
 cache:
   yarn: true
@@ -37,3 +37,8 @@ before_cache:
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
+
+deploy:
+  on:
+    branch: prod
+    tags: true
