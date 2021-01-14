@@ -1,33 +1,21 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark" [containerInside]="false">
-
-  <!-- Navbar brand -->
-  <mdb-navbar-brand>&nbsp;</mdb-navbar-brand>
-
-  <!-- Collapsible content -->
-  <links>
-
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          File<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">New Project..</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Open Project..</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="sure">Close Project..</a>
-          <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Run Project..</a>
-          <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Quit</a>
-        </div>
-      </li>
-
-    </ul>
-
-  </links>
-    <!-- Links -->
-</mdb-navbar>
-<!--/.Navbar-->
+<fractal-navbar></fractal-navbar>
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <div id="table" class="table-editable">
+      <h3 class="float-left text-white" style="padding-left: 5%;">Lines</h3>
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="btn btn-success btn-sm" (click)="add()">
+          New Line
+        </a>
+      </span>
+      <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
+        <tr *ngFor="let line of contentManager.sessionLines.lines; let id = index">
+          <td>
+            <span (keyup)="changeValue(id, $event)" (blur)="updateList(id, $event)" contenteditable="true">{{line.words}}</span>
+            <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="remove(id)">(remove)</button>
+          </td>
+        </tr>
+      </table>
+  </div>
+</div>

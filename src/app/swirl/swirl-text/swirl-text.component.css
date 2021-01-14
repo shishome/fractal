@@ -12,6 +12,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   overflow: hidden;
+  z-index: 30;
 }
 #content {
   animation: breathing 4s linear infinite;
@@ -20,6 +21,7 @@
   font-size: 7vh;
   text-wrap: none;
   overflow: hidden;
+  z-index: 30;
 }
 @-webkit-keyframes breathing {
   0% {

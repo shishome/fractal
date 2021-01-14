@@ -10,6 +10,9 @@ export class SwirlContentManagerService {
   public sessionLines: LineList;
   public activeLine: Line;
 
+  public textColor: string = "\#000000";
+  public images: string[] = [];
+
   public lineTimerFunc: any;
 
   constructor() {

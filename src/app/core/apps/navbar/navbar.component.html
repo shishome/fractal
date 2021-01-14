@@ -1,0 +1,39 @@
+<!--Navbar-->
+<div id="fractalBar">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand>&nbsp;</mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    File<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Project...</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Project As...</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">New Project..</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Open Project..</a>
+
+                    <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="sure">Close Project..</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">Run Project..</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Quit</a>
+                </div>
+            </li>
+
+        </ul>
+
+    </links>
+    <!-- Links -->
+</mdb-navbar>
+<!--/.Navbar-->
+</div>
