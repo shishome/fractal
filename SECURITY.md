@@ -2,11 +2,11 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
-| 0.1.x   | :white_check_mark: |
-| < 0.0.x   | :x:                |
+| Version | Supported          | Until                                   |
+| ------- | ------------------ | --------------------------------------  |
+| 1.0.x   | :white_check_mark: | 3 Months after next major release (TBD) |
+| 0.1.x   | :white_check_mark: | Until 1.0.x Release                     |
+| < 0.0.x | :x:                | N/A                                     |
 
 ## Reporting a Vulnerability
 
