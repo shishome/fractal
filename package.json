@@ -1,6 +1,6 @@
 {
   "name": "fractal",
-  "version": "0.0.1-alpha",
+  "version": "1.0.0",
   "description": "Hypno Sprial Program",
   "homepage": "https://github.com/shishome/fractal",
   "author": {
@@ -88,7 +88,7 @@
     "conventional-changelog-cli": "2.1.1",
     "core-js": "3.6.5",
     "cross-env": "7.0.2",
-    "electron": "^11.0.3",
+    "electron": "^14.0.0",
     "electron-builder": "^22.9.1",
     "electron-reload": "1.5.0",
     "eslint": "7.13.0",

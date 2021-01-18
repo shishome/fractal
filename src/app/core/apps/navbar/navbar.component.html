@@ -18,15 +18,25 @@
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Project...</a>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Project As...</a>
+                    <div class="divider dropdown-divider" *ngIf="projectManager.nextAction !== 'home'"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" *ngIf="projectManager.nextAction !== 'home'">Back to Project Menu..</a>
                     <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">New Project..</a>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">Open Project..</a>
-
+                    <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/">Close Project..</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">Run Project..</a>
-                    <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">Quit</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown" dropdown *ngIf="projectManager.inEditor">
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    Session<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Session...</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Session As...</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">Run Project..</a>
                 </div>
             </li>
 

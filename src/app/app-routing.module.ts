@@ -4,7 +4,7 @@ import { PageNotFoundComponent } from './shared/components';
 
 import { HomeRoutingModule } from './home/home-routing.module';
 import {SwirlRoutingModule} from "./swirl/swirl-routing.module";
-import {ProjectRoutingModule} from "./project/project-routing.module";
+import {EditorRoutingModule} from "./editor/editor-routing.module";
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     HomeRoutingModule,
-    ProjectRoutingModule,
+    EditorRoutingModule,
     SwirlRoutingModule
   ],
   exports: [RouterModule]

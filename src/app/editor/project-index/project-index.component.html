@@ -1,0 +1,14 @@
+<fractal-navbar></fractal-navbar>
+<br>
+<div class="container">
+    <h2>
+        <input [(ngModel)]="projectManager.projectData.name" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
+    </h2>
+    <hr>
+    <a href="javascript:///" class="btn btn-success">New Session</a>
+
+    <div class="row">
+        <div class="col-md-4 card-body" *ngFor="let session of projectManager.projectData.sessions"></div>
+    </div>
+
+</div>

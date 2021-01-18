@@ -15,7 +15,7 @@ import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 import {SwirlModule} from "./swirl/swirl.module";
-import {ProjectModule} from "./project/project.module";
+import {EditorModule} from "./editor/editor.module";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
 
 // AoT requires an exported function for factories
@@ -32,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     CoreModule,
     SharedModule,
     HomeModule,
-    ProjectModule,
+    EditorModule,
     SwirlModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),

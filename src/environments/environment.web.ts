@@ -1,4 +1,5 @@
 export const AppConfig = {
   production: false,
-  environment: 'WEB'
+  environment: 'release',
+  version: '1'
 };

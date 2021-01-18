@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectManagerService} from "../../services/project-manager/project-manager.service";
 
 @Component({
   selector: 'fractal-navbar',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      public projectManager: ProjectManagerService
+  ) { }
 
   ngOnInit(): void {
   }

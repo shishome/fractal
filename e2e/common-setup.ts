@@ -12,7 +12,7 @@ export default function setup(): void {
 
       // Assuming you have the following directory structure
 
-      //  |__ my project
+      //  |__ my editor
       //     |__ ...
       //     |__ main.js
       //     |__ package.json

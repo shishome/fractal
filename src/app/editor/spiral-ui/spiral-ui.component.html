@@ -1,0 +1,60 @@
+<fractal-navbar></fractal-navbar>
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <div id="table" class="table-editable">
+      <h3 class="float-left text-white" style="padding-left: 5%;">Lines</h3>
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="btn btn-success btn-sm" (click)="addLine()">
+          New Line
+        </a>
+      </span>
+      <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
+        <tr *ngFor="let line of contentManager.loadedSession.lines.lines; let id = index">
+          <td>
+            <span (keyup)="changeValue(id, $event)" (blur)="updateList(id, $event)" contenteditable="true">{{line.words}}</span>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeLine(id)">(remove)</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateLine(line)">(duplicate)</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-4">
+    Preview Window
+  </div>
+  <div class="col-md-4">
+    <h3 class="float-left text-white" style="padding-left: 5%;">Media</h3>
+    <a class="btn btn-success btn-sm" (click)="addFiles()">
+      Add Files
+    </a>
+    <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
+      <tr *ngFor="let file of contentManager.files; let id = index">
+        <td>
+          <div class="row">
+            <div class="col-md-4">
+              <img [src]="file" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+              {{file}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeFile(id)">(remove)</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateFile(id)">(duplicate)</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
