@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {SwirlContentManagerService} from "../core/services/swirl/swirl-content-manager.service";
+import {Line} from "../interfaces/swirl/line";
 
 @Component({
   selector: 'app-detail',
@@ -40,4 +41,7 @@ export class ProjectComponent implements OnInit {
     this.editField = event.target.textContent;
   }
 
+    duplicate(line: Line) {
+        this.contentManager.sessionLines.lines.push(line);
+    }
 }

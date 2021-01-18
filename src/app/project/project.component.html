@@ -13,7 +13,14 @@
         <tr *ngFor="let line of contentManager.sessionLines.lines; let id = index">
           <td>
             <span (keyup)="changeValue(id, $event)" (blur)="updateList(id, $event)" contenteditable="true">{{line.words}}</span>
-            <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="remove(id)">(remove)</button>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="remove(id)">(remove)</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicate(line)">(duplicate)</button>
+              </div>
+            </div>
           </td>
         </tr>
       </table>
