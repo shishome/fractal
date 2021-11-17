@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SwirlContentManagerService} from '../../core/services/swirl/swirl-content-manager.service';
 
 @Component({
@@ -6,11 +6,16 @@ import {SwirlContentManagerService} from '../../core/services/swirl/swirl-conten
   templateUrl: './swirl-text.component.html',
   styleUrls: ['./swirl-text.component.css']
 })
-export class SwirlTextComponent implements OnInit {
+export class SwirlTextComponent implements OnInit, OnDestroy {
 
   constructor(public contentService: SwirlContentManagerService) { }
 
   ngOnInit(): void {
+
+  }
+
+  ngOnDestroy() {
+
   }
 
 }

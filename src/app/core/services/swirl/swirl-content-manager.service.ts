@@ -11,7 +11,7 @@ import {RandomSpiralSession} from "../../../interfaces/sessions/random-spiral-se
 export class SwirlContentManagerService {
 
 
-  public loadedSession: SpiralSession | GuidedSpiralSession | RandomSpiralSession;
+  public loadedSession: SpiralSession;
 
   public activeLine: Line;
 
@@ -19,8 +19,9 @@ export class SwirlContentManagerService {
 
   public lineTimerFunc: any;
 
-  constructor(session: SpiralSession | GuidedSpiralSession | RandomSpiralSession | null = null) {
+  loadSession(session: SpiralSession | null = null){
     if(session === null){
+      console.log("instantiating a new session")
       this.loadedSession = {
         lines: {
           lines: [{words: "enter your spiral text here"}]
@@ -35,8 +36,13 @@ export class SwirlContentManagerService {
     }
   }
 
+  constructor() {
+
+  }
+
   public startTimers(){
     this.lineTimerFunc = setInterval(() => {
+      console.log(this.loadedSession.lines)
       this.activeLine = this.loadedSession.lines.lines[Math.floor(Math.random() * this.loadedSession.lines.lines.length)];
     },500);
   }

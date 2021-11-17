@@ -19,4 +19,9 @@ export class ProjectIndexComponent implements OnInit {
     }
   }
 
+    newSessionRandom() {
+        this.projectManager.nextAction = 'new'
+        this.projectManager.inEditor = true;
+        this.router.navigate(["/editor/spiral-ui"])
+    }
 }

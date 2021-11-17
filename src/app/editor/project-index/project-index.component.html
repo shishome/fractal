@@ -5,7 +5,46 @@
         <input [(ngModel)]="projectManager.projectData.name" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
     </h2>
     <hr>
-    <a href="javascript:///" class="btn btn-success">New Session</a>
+    <div dropdown>
+        <a dropdownToggle href="javascript:///" class="btn btn-success">New Session</a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu" style="padding-right: 10px;">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="newSessionRandom()">
+                <div class="row">
+                    <div class="col-1">
+                        <i class="bi bi-patch-question-fill list-icon"></i>
+                    </div>
+                    <div class="col-11 list-item-text">
+                        <h5 class="text-muted">Random Spiral Session</h5>
+                        <p class="text-muted">Randomly flashes words across the screen selected from prewritten lines</p>
+                    </div>
+                </div>
+            </a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///">
+                <div class="row">
+                    <div class="col-1">
+                        <i class="bi bi-card-list list-icon"></i>
+                    </div>
+                    <div class="col-11 list-item-text">
+                        <h5 class="text-muted">Guided Spiral Session (Coming Soon)</h5>
+                        <p class="text-muted">Displays prewritten lines in order in a guided spiral session.</p>
+                    </div>
+                </div>
+            </a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///">
+                <div class="row">
+                    <div class="col-1">
+                        <i class="bi bi-card-checklist list-icon"></i>
+                    </div>
+                    <div class="col-11 list-item-text">
+                        <h5 class="text-muted">Engram Session (Coming Soon)</h5>
+                        <p class="text-muted">Select the next word in a sentence among incorrect words to build a mantra.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="col-md-4 card-body" *ngFor="let session of projectManager.projectData.sessions"></div>

@@ -1,7 +1,14 @@
 <fractal-navbar></fractal-navbar>
 <br>
+<div class="container">
+  <p class="text-white">Spiral Editor</p>
+<h2>
+  <input [(ngModel)]="contentManager.loadedSession.title" (blur)="updateSaveContent()" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
+</h2>
+</div>
+<br><br>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div id="table" class="table-editable">
       <h3 class="float-left text-white" style="padding-left: 5%;">Lines</h3>
       <span class="table-add float-right mb-3 mr-2">
@@ -26,14 +33,13 @@
       </table>
     </div>
   </div>
-  <div class="col-md-4">
-    Preview Window
-  </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <h3 class="float-left text-white" style="padding-left: 5%;">Media</h3>
-    <a class="btn btn-success btn-sm" (click)="addFiles()">
-      Add Files
-    </a>
+    <span class="table-add float-right mb-3 mr-2">
+      <a class="btn btn-success btn-sm" (click)="addFiles()">
+        Add Files
+      </a>
+    </span>
     <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
       <tr *ngFor="let file of contentManager.files; let id = index">
         <td>

@@ -17,8 +17,12 @@ While trance had great support for a long time in bnvm use 1oth spiral video ren
 ## Contributing
 Everyone is welcome to contribute. As the project gets bigger there will be a link to a community here for support and for development.
 
+## Tech Stack
+* Angular 11
+* Electron 14
+
 ## Running Fractal from Source
-* Requires Node v14 LTS
+* Requires Node v14.18.1 minimum
 * Clone the repo and run ```npm i```
 * ```npm run start```
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {SwirlContentManagerService} from "../../core/services/swirl/swirl-content-manager.service";
 import {Line} from "../../interfaces/swirl/line";
 import {ElectronService} from "../../core/services";
@@ -19,17 +19,23 @@ export class SpiralUiComponent implements OnInit {
       private route: ActivatedRoute,
       public contentManager: SwirlContentManagerService,
       public electronService: ElectronService,
-      public projectManager: ProjectManagerService
+      public projectManager: ProjectManagerService,
+      public router: Router
   ) {
     let action = projectManager.nextAction;
     console.log(action);
     if(action === "new"){
       console.log("Rendering a blank editor...");
-      this.contentManager = new SwirlContentManagerService();
+      this.contentManager.loadSession(null);
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    if(this.contentManager.loadedSession === undefined){
+      this.projectManager.nextAction = "main-menu";
+      this.router.navigate(["/editor"])
+    }
+  }
 
   updateSaveContent(){
     this.projectManager.saveContent = this.contentManager.loadedSession;
