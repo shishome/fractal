@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
+var remote = require("@electron/remote/main");
 var path = require("path");
 var url = require("url");
 var win = null;
 var args = process.argv.slice(1), serve = args.some(function (val) { return val === '--serve'; });
 function createWindow() {
+    remote.initialize();
     var electronScreen = electron_1.screen;
     var size = electronScreen.getPrimaryDisplay().workAreaSize;
     // Create the browser window.
@@ -20,6 +22,7 @@ function createWindow() {
             contextIsolation: false,
         },
     });
+    remote.enable(win.webContents);
     if (serve) {
         win.webContents.openDevTools();
         require('electron-reload')(__dirname, {
