@@ -1,4 +1,5 @@
-import { app, BrowserWindow, screen } from 'electron';
+import { app, BrowserWindow, screen, webContents } from 'electron';
+import * as remote from '@electron/remote/main';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -8,6 +9,7 @@ const args = process.argv.slice(1),
 
 function createWindow(): BrowserWindow {
 
+  remote.initialize();
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
@@ -24,6 +26,8 @@ function createWindow(): BrowserWindow {
       //enableRemoteModule : true // true if you want to run 2e2 test  with Spectron or use remote module in renderer context (ie. Angular)
     },
   });
+
+  remote.enable(win.webContents)
 
   if (serve) {
 
