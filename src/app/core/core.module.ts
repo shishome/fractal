@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './apps/navbar/navbar.component';
 import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {RouterModule} from "@angular/router";
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [NavbarComponent],
@@ -12,7 +13,8 @@ import {RouterModule} from "@angular/router";
     imports: [
         CommonModule,
         RouterModule,
-        MDBBootstrapModule
+        MDBBootstrapModule,
+        TranslateModule
     ]
 })
 export class CoreModule { }

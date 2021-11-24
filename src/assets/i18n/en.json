@@ -1,10 +1,42 @@
 {
   "PAGES": {
+
+      "NAVBAR": {
+        "FILE": "File",
+        "SESSION": "Session",
+        "SAVE_PROJECT": "Save Project...",
+        "RETURN_PROJECT_MENU": "Back to Project Menu...",
+        "NEW_PROJECT": "New Project...",
+        "OPEN_PROJECT": "Open Project...",
+        "CLOSE_PROJECT": "Close Project...",
+        "QUIT": "Quit",
+        "SAVE_SESSION": "Save Session...",
+        "RUN_SESSION": "Run Session..."
+      },
+
       "HOME": {
           "APP_NAME": "Fractal",
           "NEW_PROJECT": "New Project",
           "OPEN_PROJECT": "Open Project",
           "CREDITS": "Credits"
-      }
+      },
+      "SPIRAL_EDITOR": {
+        "TITLE": "Spiral Editor",
+        "LINES": "Lines",
+        "REMOVE": "remove",
+        "DUPLICATE": "duplicate",
+        "NEW_LINE": "New Line",
+        "MEDIA": "Media",
+        "ADD_FILES": "Add Files"
+      },
+    "PROJECT_HOME": {
+      "NEW_SESSION": "New Session",
+      "RANDOM_SPIRAL_SESSION": "Random Spiral Session",
+      "RSS_DESCRIPTION": "Randomly flashes words across the screen selected from prewritten lines",
+      "GUIDED_SPIRAL_SESSION": "Guided Spiral Session (Coming Soon)",
+      "GSS_DESCRIPTION": "Displays prewritten lines in order in a guided spiral session.",
+      "ENGRAM_SESSION": "Engram Session (Coming Soon)",
+      "ENG_SESSION": "Select the next word in a sentence among incorrect words to build a mantra."
+    }
   }
 }

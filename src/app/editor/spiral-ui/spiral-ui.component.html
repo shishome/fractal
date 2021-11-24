@@ -1,7 +1,7 @@
 <fractal-navbar></fractal-navbar>
 <br>
 <div class="container">
-  <p class="text-white">Spiral Editor</p>
+  <p class="text-white">{{ 'PAGES.SPIRAL_EDITOR.TITLE' | translate }}</p>
 <h2>
   <input [(ngModel)]="contentManager.loadedSession.title" (blur)="updateSaveContent()" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
 </h2>
@@ -10,10 +10,10 @@
 <div class="row">
   <div class="col-md-6">
     <div id="table" class="table-editable">
-      <h3 class="float-left text-white" style="padding-left: 5%;">Lines</h3>
+      <h3 class="float-left text-white" style="padding-left: 5%;">{{ 'PAGES.SPIRAL_EDITOR.LINES' | translate }}</h3>
       <span class="table-add float-right mb-3 mr-2">
         <a class="btn btn-success btn-sm" (click)="addLine()">
-          New Line
+          {{ 'PAGES.SPIRAL_EDITOR.NEW_LINE' | translate }}
         </a>
       </span>
       <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
@@ -22,10 +22,10 @@
             <span (keyup)="changeValue(id, $event)" (blur)="updateList(id, $event)" contenteditable="true">{{line.words}}</span>
             <div class="row">
               <div class="col-md-6">
-                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeLine(id)">(remove)</button>
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeLine(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
               </div>
               <div class="col-md-6">
-                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateLine(line)">(duplicate)</button>
+                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateLine(line)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
               </div>
             </div>
           </td>
@@ -34,10 +34,10 @@
     </div>
   </div>
   <div class="col-md-6">
-    <h3 class="float-left text-white" style="padding-left: 5%;">Media</h3>
+    <h3 class="float-left text-white" style="padding-left: 5%;">{{ 'PAGES.SPIRAL_EDITOR.MEDIA' | translate }}</h3>
     <span class="table-add float-right mb-3 mr-2">
       <a class="btn btn-success btn-sm" (click)="addFiles()">
-        Add Files
+        {{ 'PAGES.SPIRAL_EDITOR.ADD_FILES' | translate }}
       </a>
     </span>
     <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
@@ -53,10 +53,10 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeFile(id)">(remove)</button>
+              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeFile(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
             </div>
             <div class="col-md-6">
-              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateFile(id)">(duplicate)</button>
+              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateFile(id)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
             </div>
           </div>
         </td>

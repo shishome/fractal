@@ -6,7 +6,7 @@
     </h2>
     <hr>
     <div dropdown>
-        <a dropdownToggle href="javascript:///" class="btn btn-success">New Session</a>
+        <a dropdownToggle href="javascript:///" class="btn btn-success">{{ 'PAGES.PROJECT_HOME.NEW_SESSION' | translate }}</a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu" style="padding-right: 10px;">
             <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="newSessionRandom()">
                 <div class="row">
@@ -14,8 +14,8 @@
                         <i class="bi bi-patch-question-fill list-icon"></i>
                     </div>
                     <div class="col-11 list-item-text">
-                        <h5 class="text-muted">Random Spiral Session</h5>
-                        <p class="text-muted">Randomly flashes words across the screen selected from prewritten lines</p>
+                        <h5 class="text-muted">{{ 'PAGES.PROJECT_HOME.RANDOM_SPIRAL_SESSION' | translate }}</h5>
+                        <p class="text-muted">{{ 'PAGES.PROJECT_HOME.RSS_DESCRIPTION' | translate }}</p>
                     </div>
                 </div>
             </a>
@@ -25,8 +25,8 @@
                         <i class="bi bi-card-list list-icon"></i>
                     </div>
                     <div class="col-11 list-item-text">
-                        <h5 class="text-muted">Guided Spiral Session (Coming Soon)</h5>
-                        <p class="text-muted">Displays prewritten lines in order in a guided spiral session.</p>
+                        <h5 class="text-muted">{{ 'PAGES.PROJECT_HOME.GUIDED_SPIRAL_SESSION' | translate }}</h5>
+                        <p class="text-muted">{{ 'PAGES.PROJECT_HOME.GSS_DESCRIPTION' | translate }}</p>
                     </div>
                 </div>
             </a>
@@ -36,8 +36,8 @@
                         <i class="bi bi-card-checklist list-icon"></i>
                     </div>
                     <div class="col-11 list-item-text">
-                        <h5 class="text-muted">Engram Session (Coming Soon)</h5>
-                        <p class="text-muted">Select the next word in a sentence among incorrect words to build a mantra.</p>
+                        <h5 class="text-muted">{{ 'PAGES.PROJECT_HOME.ENGRAM_SESSION' | translate }}</h5>
+                        <p class="text-muted">{{ 'PAGES.PROJECT_HOME.ENG_SESSION' | translate }}</p>
                     </div>
                 </div>
             </a>

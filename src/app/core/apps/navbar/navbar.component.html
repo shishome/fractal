@@ -14,29 +14,27 @@
             <!-- Dropdown -->
             <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                    File<span class="caret"></span></a>
+                    {{ 'PAGES.NAVBAR.FILE' | translate }}<span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="projectManager.initSave()">Save Project...</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="projectManager.initSaveAs()">Save Project As...</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="projectManager.initSave()">{{ 'PAGES.NAVBAR.SAVE_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider" *ngIf="projectManager.nextAction !== 'home'"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" *ngIf="projectManager.nextAction !== 'home'">Back to Project Menu..</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" *ngIf="projectManager.nextAction !== 'home'">{{ 'PAGES.NAVBAR.RETURN_PROJECT_MENU' | translate }}</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">New Project..</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Open Project..</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.NEW_PROJECT' | translate }}</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.OPEN_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/">Close Project..</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/">{{ 'PAGES.NAVBAR.CLOSE_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Quit</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.QUIT' | translate }}</a>
                 </div>
             </li>
             <li class="nav-item dropdown" dropdown *ngIf="projectManager.inEditor">
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                    Session<span class="caret"></span></a>
+                    {{ 'PAGES.NAVBAR.SESSION' | translate }}<span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Session...</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Save Session As...</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.SAVE_SESSION' | translate }}</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">Run Project..</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">{{ 'PAGES.NAVBAR.RUN_SESSION' | translate }}</a>
                 </div>
             </li>
 
