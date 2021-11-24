@@ -7,4 +7,5 @@ export interface Settings {
     sessions: Session[];
     lastSaved?: string;
     version?: string;
+    folderName: string;
 }

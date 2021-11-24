@@ -11,6 +11,7 @@ function createWindow() {
     var electronScreen = electron_1.screen;
     var size = electronScreen.getPrimaryDisplay().workAreaSize;
     // Create the browser window.
+    //todo: don't run in webSecurity: false, it's bad practice. -YS
     win = new electron_1.BrowserWindow({
         x: 0,
         y: 0,

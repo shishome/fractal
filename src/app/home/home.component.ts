@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void { }
 
+    openProject() {
+    this.projectManager.openProject();
+    }
+
     newProject() {
       this.projectManager.newProject();
       this.router.navigate(['editor/']);

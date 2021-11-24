@@ -30,6 +30,7 @@ export class SwirlContentManagerService {
         title: 'Unsaved Session',
         files: [],
         images: [],
+        uniqueId: ''
       } as RandomSpiralSession;
     }else{
       this.loadedSession = session;
