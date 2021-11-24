@@ -52,7 +52,7 @@
             <div *ngIf="session.type === 'rss'">
                 <blockquote>{{ 'PAGES.PROJECT_HOME.RANDOM_SPIRAL_SESSION' | translate }}</blockquote>
                 <a href="javascript:///" class="btn btn-sm btn-success" (click)="openSession(session.type, session)">Open Session</a>
-                <a href="javascript:///" class="btn btn-sm btn-warning">Run Session</a>
+                <!-- <a href="javascript:///" class="btn btn-sm btn-warning" (click)="runSession(session.type, session)">Run Session</a> -->
             </div>
         </div>
     </div>

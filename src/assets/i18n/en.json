@@ -37,6 +37,9 @@
       "GSS_DESCRIPTION": "Displays prewritten lines in order in a guided spiral session.",
       "ENGRAM_SESSION": "Engram Session (Coming Soon)",
       "ENG_SESSION": "Select the next word in a sentence among incorrect words to build a mantra."
+    },
+    "CREDITS": {
+      "RETURN_HOME": "Return Home..."
     }
   }
 }

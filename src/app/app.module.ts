@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
 import {SwirlModule} from "./swirl/swirl.module";
 import {EditorModule} from "./editor/editor.module";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
+import { CreditsComponent } from './credits/credits.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -24,7 +25,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CreditsComponent],
   imports: [
     BrowserModule,
     FormsModule,

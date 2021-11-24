@@ -18,14 +18,14 @@
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
                     <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="projectManager.initSave()">{{ 'PAGES.NAVBAR.SAVE_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider" *ngIf="projectManager.nextAction !== 'home'"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" *ngIf="projectManager.nextAction !== 'home'">{{ 'PAGES.NAVBAR.RETURN_PROJECT_MENU' | translate }}</a>
-                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="goToMenu()" *ngIf="projectManager.nextAction !== 'home'">{{ 'PAGES.NAVBAR.RETURN_PROJECT_MENU' | translate }}</a>
+<!--                    <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.NEW_PROJECT' | translate }}</a>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.OPEN_PROJECT' | translate }}</a>
-                    <div class="divider dropdown-divider"></div>
+                    <div class="divider dropdown-divider"></div> -->
                     <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/">{{ 'PAGES.NAVBAR.CLOSE_PROJECT' | translate }}</a>
-                    <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.QUIT' | translate }}</a>
+                    <!-- <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="electronService.app.quit()">{{ 'PAGES.NAVBAR.QUIT' | translate }}</a> -->
                 </div>
             </li>
 

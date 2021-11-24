@@ -36,4 +36,15 @@ export class ProjectIndexComponent implements OnInit {
             break;
         }
     }
+
+  runSession(type: string, session: Session) {
+    switch(type){
+      case 'rss':
+        this.projectManager.nextAction = 'run-swirl';
+        this.projectManager.saveContent = session;
+        this.projectManager.inEditor = true;
+        this.router.navigate(["/swirl"])
+        break;
+    }
+  }
 }

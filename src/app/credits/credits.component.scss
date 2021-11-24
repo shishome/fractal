@@ -1,0 +1,58 @@
+:host {
+
+}
+#welcome {
+  width: 750px;
+  height: 350px;
+  background-color: lightslategray;
+  border-radius: 25px;
+  box-shadow: black 2px 2px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  overflow-y: scroll;
+}
+#logo-text{
+  color: deepskyblue;
+  text-align: center;
+  margin-top: 38%;
+  font-weight: lighter;
+  line-height: 45%;
+  small {
+    font-size: 15px;
+    font-weight: lighter;
+  }
+}
+#nav-welcome {
+
+  margin-top: 5%;
+
+  padding-left: 45px;
+
+  .nav-link {
+    color: #222;
+    border-radius: 15px 0px 0px 15px;
+    margin-top: 15px;
+  }
+  a:link.nav-link, a:visited.nav-link {
+    background: slategray;
+  }
+  a:hover.nav-link {
+    background: darkslategray;
+    color: lightgray;
+  }
+}
+
+#fractal-credits  {
+  padding-left: 25px;
+  margin-top: 2%;
+
+  a {
+    color: white;
+  }
+
+}

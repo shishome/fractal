@@ -27,6 +27,10 @@ We're on telegram: https://t.me/fractalhypno
 * Angular 11
 * Electron 14
 
+## Swirl MP4
+
+Generously made by chemicalcrux. https://t.me/FenSpiral
+
 ## Running Fractal from Source
 * Requires Node v14.18.1 minimum
 * Clone the repo and run ```yarn``` to install packages
