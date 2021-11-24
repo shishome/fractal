@@ -6,11 +6,13 @@
 ![Build][travis]
 ![Maintained][maintained-badge]
 
+
 [![Discuss][telegram]](https://t.me/fractalhypno)
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
 
+[![Crowdin](https://badges.crowdin.net/fractal/localized.svg)](https://crowdin.com/project/fractal)
 # Introduction
 Fractal is a hypnosis spiral generation program built in Node.js, Electron, and Angular and is inspired from the work by [ohgodhowdidthis/trance](https://github.com/ohgodhowdidthis/trance).
 
@@ -32,7 +34,9 @@ We're on telegram: https://t.me/fractalhypno
 
 Generously made by chemicalcrux. https://t.me/FenSpiral
 
-## 
+## Localization (i18n)
+
+Community-powered Translations provided by Crowdin supporters. Speak a language other than English? Help us translate this program at: https://crowdin.com/project/fractal/
 
 ## Running Fractal from Source
 * Requires Node v14.18.1 minimum
