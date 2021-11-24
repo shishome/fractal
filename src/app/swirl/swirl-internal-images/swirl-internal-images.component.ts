@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SwirlContentManagerService} from "../../core/services/swirl/swirl-content-manager.service";
 
 @Component({
   selector: 'swirl-internal-images',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwirlInternalImagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      public contentService: SwirlContentManagerService
+  ) { }
 
   ngOnInit(): void {
   }

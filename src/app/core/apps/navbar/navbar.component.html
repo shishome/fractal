@@ -28,15 +28,6 @@
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.QUIT' | translate }}</a>
                 </div>
             </li>
-            <li class="nav-item dropdown" dropdown *ngIf="projectManager.inEditor">
-                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                    {{ 'PAGES.NAVBAR.SESSION' | translate }}<span class="caret"></span></a>
-                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.SAVE_SESSION' | translate }}</a>
-                    <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/swirl">{{ 'PAGES.NAVBAR.RUN_SESSION' | translate }}</a>
-                </div>
-            </li>
 
         </ul>
 

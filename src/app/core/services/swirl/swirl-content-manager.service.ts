@@ -18,8 +18,11 @@ export class SwirlContentManagerService {
   public loadedSession: SpiralSession;
 
   public activeLine: Line;
+  public activeImage: string;
 
   public lineTimerFunc: any;
+
+  public imageTimerFunc: any;
 
   loadSession(session: SpiralSession | null = null){
     if(session === null){
@@ -78,13 +81,17 @@ export class SwirlContentManagerService {
 
   public startTimers(){
     this.lineTimerFunc = setInterval(() => {
-      console.log(this.loadedSession.lines)
+      //console.log(this.loadedSession.lines)
       this.activeLine = this.loadedSession.lines.lines[Math.floor(Math.random() * this.loadedSession.lines.lines.length)];
     },500);
+    this.imageTimerFunc = setInterval(() => {
+      this.activeImage = 'file:///'+this.projectManager.baseDir+'/images/'+this.loadedSession.uniqueId+'/'+this.loadedSession.files[Math.floor(Math.random() * this.loadedSession.files.length)];
+    },300);
   }
 
   public destroyTimers() {
     clearInterval(this.lineTimerFunc);
+    clearInterval(this.imageTimerFunc);
     console.log("Destroyed timers");
   }
 

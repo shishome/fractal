@@ -97,7 +97,7 @@ export class SpiralUiComponent implements OnInit {
     this.updateSaveContent();
   }
 
-  duplicateFile(line: any) {
+  duplicateFile(line: string) {
     this.contentManager.loadedSession.files.push(line);
     this.updateSaveContent();
   }
