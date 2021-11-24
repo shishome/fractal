@@ -14,6 +14,10 @@ function createWindow(): BrowserWindow {
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
   // Create the browser window.
+
+
+  //todo: don't run in webSecurity: false, it's bad practice. -YS
+
   win = new BrowserWindow({
     x: 0,
     y: 0,
@@ -23,6 +27,7 @@ function createWindow(): BrowserWindow {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
       contextIsolation: false,  // false if you want to run 2e2 test with Spectron
+      webSecurity: false
       //enableRemoteModule : true // true if you want to run 2e2 test  with Spectron or use remote module in renderer context (ie. Angular)
     },
   });

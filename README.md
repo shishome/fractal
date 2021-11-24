@@ -23,7 +23,7 @@ Everyone is welcome to contribute. As the project gets bigger there will be a li
 
 ## Running Fractal from Source
 * Requires Node v14.18.1 minimum
-* Clone the repo and run ```npm i```
+* Clone the repo and run ```yarn``` to install packages
 * ```npm run start```
 
 [travis]: https://www.travis-ci.com/shishome/fractal.svg?branch=master

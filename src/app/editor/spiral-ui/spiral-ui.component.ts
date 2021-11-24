@@ -72,7 +72,7 @@ export class SpiralUiComponent implements OnInit {
         {
           properties: ['openFile', 'multiSelections'],
           filters: [
-            { name: 'Images', extensions: ['jpg', 'png', 'gif'] }
+            { name: 'Images', extensions: ['jpg', 'png', 'gif', 'jpeg'] }
           ],
           message: 'Choose files to import into the editor.'
         }
