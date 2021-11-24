@@ -2,37 +2,30 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
+Current Version: 0.0.0  (Can be retrieved from Fractal Credits)
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+Issue Type: bug  | question
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Environment:**
+**OS**
+[ ] Windows (Specify Version)
+[ ] MacOS (Specify Version)
+[ ] Linux (Specify Distro and Version)
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Arch**
+[ ] x86_64 (Generally the correct option)
+[ ] i386
+[ ] ARM64
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Issue Description:**
+Provide a detailed description here
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Steps to reproduce:**
+Provide a detailed instruction set to reproduce the issue
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+Attachments: Yes | No
+Place any attachements in the issue that can help us reproduce. Screenshots or Screen Recordings. 

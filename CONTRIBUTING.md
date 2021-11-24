@@ -14,25 +14,26 @@ Current Version: 0.0.0  (Can be retrieved from Fractal Credits)
 
 Issue Type: bug  | question
 
-Environment:
-OS
+**Environment:**
+**OS**
 [ ] Windows (Specify Version)
 [ ] MacOS (Specify Version)
 [ ] Linux (Specify Distro and Version)
 
-Arch
+**Arch**
 [ ] x86_64 (Generally the correct option)
 [ ] i386
 [ ] ARM64
 
-Issue Description:
-<provide a detailed description here>
+**Issue Description:**
+Provide a detailed description here
 
-Steps to reproduce:
-<provide a detailed instruction set to reproduce the issue>
+**Steps to reproduce:**
+Provide a detailed instruction set to reproduce the issue
 
 Attachments: Yes | No
-<place any attachements in the issue that can help us reproduce. Screenshots or Screen Recordings.> 
+Place any attachements in the issue that can help us reproduce. Screenshots or Screen Recordings. 
+
 ```
 
 ## Enhancement Requests
@@ -44,18 +45,20 @@ If your enhancement is not on the roadmap, check the roadmap for the next major 
 If your enhancement is STILL not in the project, use the following template:
 
 ```
+
 Current Version: 0.0.0 (Can be retrieved from Fractal Credits)
 
-Issue Type: enhancement
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-Enhancement Description:
-<provide a detailed description here>
+**Additional context**
+Add any other context or screenshots about the feature request here.
 
-Description of use of feature:
-<provide a detailed description of how the end user would use this feature>
+**Enhancement Description**
+Provide a detailed description here
 
-Attachments: Yes | No
-<place any attachements in the issue that can help us reproduce. Screenshots or Screen Recordings.> 
+**Description of use of feature**
+Provide a detailed description of how the end user would use this feature
 ```
 
 Your enhancement will be accepted or denied in one of the following ways:

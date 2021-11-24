@@ -1,4 +1,5 @@
-# Fractal <small>Modern Spiral Hypnosis Program</small>
+# Fractal 
+## Modern Spiral Hypnosis Program
 
 [![Make a pull request][prs-badge]][prs]
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
@@ -30,6 +31,8 @@ We're on telegram: https://t.me/fractalhypno
 ## Swirl MP4
 
 Generously made by chemicalcrux. https://t.me/FenSpiral
+
+## 
 
 ## Running Fractal from Source
 * Requires Node v14.18.1 minimum
