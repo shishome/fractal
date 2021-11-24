@@ -5,6 +5,8 @@
 ![Build][travis]
 ![Maintained][maintained-badge]
 
+[![Discuss][telegram]](https://t.me/fractalhypno)
+
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
 
@@ -15,7 +17,11 @@ Fractal is a hypnosis spiral generation program built in Node.js, Electron, and 
 While trance had great support for a long time in bnvm use 1oth spiral video rendering and in VR video rendering, the program fell behind in API implementation and eventually broke most VR headsets. While VR is something I want to break into with fractal, right now Fractal is just aiming to encode video spirals into an MP4 format.
 
 ## Contributing
-Everyone is welcome to contribute. As the project gets bigger there will be a link to a community here for support and for development.
+Everyone is welcome to contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Community
+
+We're on telegram: https://t.me/fractalhypno
 
 ## Tech Stack
 * Angular 11
@@ -36,3 +42,4 @@ Everyone is welcome to contribute. As the project gets bigger there will be a li
 [github-star-badge]: https://img.shields.io/github/stars/shishome/fractal.svg?style=social
 [github-star]: https://github.com/shishome/fractal/stargazers
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
+[telegram]: https://img.shields.io/badge/discussion-telegram%20group-informational
