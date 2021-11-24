@@ -42,4 +42,4 @@ We're on telegram: https://t.me/fractalhypno
 [github-star-badge]: https://img.shields.io/github/stars/shishome/fractal.svg?style=social
 [github-star]: https://github.com/shishome/fractal/stargazers
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
-[telegram]: https://img.shields.io/badge/discussion-telegram%20group-informational
+[telegram]: https://img.shields.io/badge/discussion-telegram%20group-informational?logo=telegram
