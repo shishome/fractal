@@ -1,5 +1,5 @@
 export const AppConfig = {
   production: false,
   environment: 'release',
-  version: '1.0.0'
+  version: '0.1.0'
 };
