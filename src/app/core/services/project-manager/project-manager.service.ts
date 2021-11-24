@@ -88,7 +88,7 @@ export class ProjectManagerService {
     // folder created successfully, make sure subdirs are created
     try {
       this.electronService.fs.mkdirSync(this.baseDir+'/images');
-      this.electronService.fs.mkdirSync(this.baseDir+'/videos');
+      this.electronService.fs.mkdirSync(this.baseDir+'/media');
     }catch (e){
       alert("Directory already has nessesary files in it. If this is an existing project, select Open.");
       this.nextAction = "mainmenu";

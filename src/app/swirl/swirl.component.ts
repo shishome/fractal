@@ -36,6 +36,7 @@ export class SwirlComponent implements OnInit, OnDestroy {
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if(event.key === 'q'){
+      this.projectManager.nextAction = "load";
       this.router.navigate(['/editor/spiral-ui']);
     }
   }

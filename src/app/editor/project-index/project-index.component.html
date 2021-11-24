@@ -44,10 +44,17 @@
 
         </div>
     </div>
-
+    <br><br>
 
     <div class="row">
-        <div class="col-md-4 card-body" *ngFor="let session of projectManager.projectData.sessions"></div>
+        <div class="col-md-4 card card-body" *ngFor="let session of projectManager.projectData.sessions">
+            <h4>{{session.title}}</h4>
+            <div *ngIf="session.type === 'rss'">
+                <blockquote>{{ 'PAGES.PROJECT_HOME.RANDOM_SPIRAL_SESSION' | translate }}</blockquote>
+                <a href="javascript:///" class="btn btn-sm btn-success" (click)="openSession(session.type, session)">Open Session</a>
+                <a href="javascript:///" class="btn btn-sm btn-warning">Run Session</a>
+            </div>
+        </div>
     </div>
 
 </div>

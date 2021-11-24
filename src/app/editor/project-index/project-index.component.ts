@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectManagerService} from "../../core/services/project-manager/project-manager.service";
 import {Router} from "@angular/router";
+import {Session} from "../../interfaces/sessions/session";
 
 @Component({
   selector: 'app-project-index',
@@ -22,6 +23,17 @@ export class ProjectIndexComponent implements OnInit {
     newSessionRandom() {
         this.projectManager.nextAction = 'new'
         this.projectManager.inEditor = true;
-        this.router.navigate(["/editor/spiral-ui"])
+      this.router.navigate(["/editor/spiral-ui"])
+    }
+
+    openSession(type: string, session: Session) {
+        switch(type){
+          case 'rss':
+            this.projectManager.nextAction = 'load';
+            this.projectManager.saveContent = session;
+            this.projectManager.inEditor = true;
+            this.router.navigate(["/editor/spiral-ui"])
+            break;
+        }
     }
 }

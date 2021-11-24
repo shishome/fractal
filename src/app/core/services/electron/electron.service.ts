@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { ipcRenderer, webFrame, dialog } from 'electron';
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
+import * as path from 'path';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class ElectronService {
   //remote: typeof remote;
   childProcess: typeof childProcess;
   fs: typeof fs;
+  path: typeof path;
   dialog: typeof dialog;
 
   get isElectron(): boolean {
@@ -30,11 +32,12 @@ export class ElectronService {
 
       this.dialog = window.require('@electron/remote').dialog;
 
-      // If you wan to use remote object, pleanse set enableRemoteModule to true in main.ts
+      // If you want to use remote object, please set enableRemoteModule to true in main.ts
       // this.remote = window.require('electron').remote;
 
       this.childProcess = window.require('child_process');
       this.fs = window.require('fs');
+      this.path = window.require('path');
     }
   }
 }

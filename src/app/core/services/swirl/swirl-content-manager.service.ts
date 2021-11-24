@@ -4,6 +4,10 @@ import {Line} from '../../../interfaces/swirl/line';
 import {SpiralSession} from "../../../interfaces/sessions/spiral-session";
 import {GuidedSpiralSession} from "../../../interfaces/sessions/guided-spiral-session";
 import {RandomSpiralSession} from "../../../interfaces/sessions/random-spiral-session";
+import {ElectronService} from "../electron/electron.service";
+import {ProjectManagerService} from "../project-manager/project-manager.service";
+import * as uuid from 'uuid';
+import * as path from "path";
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +18,6 @@ export class SwirlContentManagerService {
   public loadedSession: SpiralSession;
 
   public activeLine: Line;
-
-  public files: string[] = [];
 
   public lineTimerFunc: any;
 
@@ -29,15 +31,48 @@ export class SwirlContentManagerService {
         textColor: "\#000000",
         title: 'Unsaved Session',
         files: [],
-        images: [],
-        uniqueId: ''
+        uniqueId: uuid.v4(),
+        type: 'rss'
       } as RandomSpiralSession;
     }else{
       this.loadedSession = session;
     }
+
+    this.checkFoldersCreated();
   }
 
-  constructor() {
+  constructor(
+      public electronService: ElectronService,
+      public projectManager: ProjectManagerService
+  ) {
+
+  }
+
+  checkFoldersCreated(): boolean {
+
+    let mediaDirectory = "/media/"+this.loadedSession.uniqueId+"/";
+    let imageDirectory = "/images/"+this.loadedSession.uniqueId+"/";
+    if (!this.electronService.fs.existsSync(this.projectManager.baseDir+mediaDirectory)){
+      this.electronService.fs.mkdirSync(this.projectManager.baseDir+mediaDirectory)
+    }
+    if (!this.electronService.fs.existsSync(this.projectManager.baseDir+imageDirectory)){
+      this.electronService.fs.mkdirSync(this.projectManager.baseDir+imageDirectory)
+    }
+
+
+    return true;
+  }
+
+  addCopyFileToImages(imagePath: string){
+    let imageDirectory = "/images/"+this.loadedSession.uniqueId+"/";
+    let fileName = this.electronService.path.basename(imagePath);
+    try{
+      this.electronService.fs.copyFileSync(imagePath, this.projectManager.baseDir+imageDirectory+fileName, this.electronService.fs.constants.COPYFILE_EXCL)
+    }catch (e){
+      throw new Error("File already exists, not adding.")
+    }
+
+      this.loadedSession.files.push(fileName);
 
   }
 

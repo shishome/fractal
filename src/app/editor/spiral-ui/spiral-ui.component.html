@@ -1,7 +1,7 @@
 <fractal-navbar></fractal-navbar>
 <br>
 <div class="container">
-  <p class="text-white">{{ 'PAGES.SPIRAL_EDITOR.TITLE' | translate }}</p>
+  <p class="text-white">{{ 'PAGES.SPIRAL_EDITOR.TITLE' | translate }} <a href="javascript:///" (click)="saveSession()" class="btn btn-sm btn-warning">{{ 'PAGES.NAVBAR.SAVE_SESSION' | translate }}</a> <a href="javascript:///" (click)="runSession()" class="btn btn-sm btn-success">{{ 'PAGES.NAVBAR.RUN_SESSION' | translate }}</a> </p>
 <h2>
   <input [(ngModel)]="contentManager.loadedSession.title" (blur)="updateSaveContent()" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
 </h2>
@@ -41,11 +41,11 @@
       </a>
     </span>
     <table class="table table-bordered table-responsive-md table-striped text-center table-dark">
-      <tr *ngFor="let file of contentManager.files; let id = index">
+      <tr *ngFor="let file of contentManager.loadedSession.files; let id = index">
         <td>
           <div class="row">
             <div class="col-md-4">
-              <img [src]="'file:///'+file" class="img-fluid">
+              <img [src]="'file:///'+projectManager.baseDir+'/images/'+contentManager.loadedSession.uniqueId+'/'+file" class="img-fluid">
             </div>
             <div class="col-md-8">
               {{file}}

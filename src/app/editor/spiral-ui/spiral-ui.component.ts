@@ -4,6 +4,7 @@ import {SwirlContentManagerService} from "../../core/services/swirl/swirl-conten
 import {Line} from "../../interfaces/swirl/line";
 import {ElectronService} from "../../core/services";
 import {ProjectManagerService} from "../../core/services/project-manager/project-manager.service";
+import {SpiralSession} from "../../interfaces/sessions/spiral-session";
 
 @Component({
   selector: 'app-detail',
@@ -24,20 +25,24 @@ export class SpiralUiComponent implements OnInit {
   ) {
     let action = projectManager.nextAction;
     console.log(action);
-    if(action === "new"){
+    if (action === "new") {
       console.log("Rendering a blank editor...");
       this.contentManager.loadSession(null);
+    }
+    if (action === "load") {
+      console.log("Loading a session from memory")
+      this.contentManager.loadSession(this.projectManager.saveContent as unknown as SpiralSession);
     }
   }
 
   ngOnInit(): void {
-    if(this.contentManager.loadedSession === undefined){
+    if (this.contentManager.loadedSession === undefined) {
       this.projectManager.nextAction = "main-menu";
       this.router.navigate(["/editor"])
     }
   }
 
-  updateSaveContent(){
+  updateSaveContent() {
     this.projectManager.saveContent = this.contentManager.loadedSession;
   }
 
@@ -53,8 +58,8 @@ export class SpiralUiComponent implements OnInit {
   }
 
   addLine() {
-      this.contentManager.loadedSession.lines.lines.push({words: "new line"});
-      this.updateSaveContent();
+    this.contentManager.loadedSession.lines.lines.push({words: "new line"});
+    this.updateSaveContent();
   }
 
   changeValue(id: number, event: any) {
@@ -62,35 +67,62 @@ export class SpiralUiComponent implements OnInit {
     this.updateSaveContent();
   }
 
-    duplicateLine(line: Line) {
-        this.contentManager.loadedSession.lines.lines.push(line);
-      this.updateSaveContent();
-    }
+  duplicateLine(line: Line) {
+    this.contentManager.loadedSession.lines.lines.push(line);
+    this.updateSaveContent();
+  }
 
   addFiles() {
     this.electronService.dialog.showOpenDialog(
         {
           properties: ['openFile', 'multiSelections'],
           filters: [
-            { name: 'Images', extensions: ['jpg', 'png', 'gif', 'jpeg'] }
+            {name: 'Images', extensions: ['jpg', 'png', 'gif', 'jpeg']}
           ],
           message: 'Choose files to import into the editor.'
         }
     ).then((obj) => {
       for (let i = 0; i < obj.filePaths.length; i++) {
-        this.contentManager.files.push(obj.filePaths[i]);
+
+        this.contentManager.addCopyFileToImages(obj.filePaths[i]);
+
+        //this.contentManager.files.push(obj.filePaths[i]);
       }
       this.updateSaveContent();
     })
   }
 
   removeFile(id: number) {
-    this.contentManager.files.splice(id, 1);
+    this.contentManager.loadedSession.files.splice(id, 1);
     this.updateSaveContent();
   }
 
   duplicateFile(line: any) {
-    this.contentManager.files.push(line);
+    this.contentManager.loadedSession.files.push(line);
     this.updateSaveContent();
+  }
+
+  runSession() {
+
+    this.projectManager.nextAction = "run-swirl";
+    this.router.navigate(["swirl/"]);
+
+  }
+
+  saveSession() {
+    let found = false;
+    for (let i = 0; i < this.projectManager.projectData.sessions.length; i++) {
+      if (this.projectManager.saveContent.uniqueId === this.projectManager.projectData.sessions[i].uniqueId) {
+        this.projectManager.projectData.sessions[i] = this.projectManager.saveContent
+        found = true;
+      }
+    }
+
+    if(!found){
+      this.projectManager.projectData.sessions.push(this.projectManager.saveContent);
+    }
+
+    this.projectManager.initSave();
+
   }
 }
