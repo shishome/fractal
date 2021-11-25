@@ -1,3 +1,4 @@
+![Icon](src/assets/icons/favicon.png)
 # Fractal 
 ## Modern Spiral Hypnosis Program
 
