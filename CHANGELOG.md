@@ -1,3 +1,11 @@
+## <small>0.1.1 (2021-11-25)</small>
+
+* add crowdin i18n translation callout ([4ed74bb](https://github.com/shishome/fractal/commit/4ed74bb))
+* Cleanup and Changelogging, Syncing Reporting Templates ([0dd198e](https://github.com/shishome/fractal/commit/0dd198e))
+* Fix issue with pack in font not displaying. This resolves #9 ([228027c](https://github.com/shishome/fractal/commit/228027c)), closes [#9](https://github.com/shishome/fractal/issues/9)
+
+
+
 ## 0.1.0 (2021-11-24)
 
 * Add duplicate button ([983d592](https://github.com/shishome/fractal/commit/983d592))
