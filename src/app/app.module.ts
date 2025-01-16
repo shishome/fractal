@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
 import {SwirlModule} from "./swirl/swirl.module";
 import {EditorModule} from "./editor/editor.module";
 import { CreditsComponent } from './credits/credits.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
