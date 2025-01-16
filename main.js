@@ -20,7 +20,7 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
             allowRunningInsecureContent: (serve) ? true : false,
-            contextIsolation: false,
+            contextIsolation: false, // false if you want to run 2e2 test with Spectron
             webSecurity: false
             //enableRemoteModule : true // true if you want to run 2e2 test  with Spectron or use remote module in renderer context (ie. Angular)
         },
@@ -29,7 +29,7 @@ function createWindow() {
     if (serve) {
         win.webContents.openDevTools();
         require('electron-reload')(__dirname, {
-            electron: require(__dirname + "/node_modules/electron")
+            electron: require("".concat(__dirname, "/node_modules/electron"))
         });
         win.loadURL('http://localhost:4200');
     }

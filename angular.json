@@ -20,18 +20,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
-              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
-              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
             ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js"
@@ -42,7 +33,7 @@
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
+              //"extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -59,7 +50,7 @@
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
+              //"extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -76,7 +67,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
+              //"extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -111,7 +102,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-electron:build"
+            "buildTarget": "angular-electron:build"
           }
         },
         "test": {
@@ -161,7 +152,6 @@
       }
     }
   },
-  "defaultProject": "fractal",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

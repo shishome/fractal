@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './apps/navbar/navbar.component';
-import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {RouterModule} from "@angular/router";
 import { TranslateModule } from '@ngx-translate/core';
+import {NgbDropdownAnchor, NgbDropdownMenu, NgbDropdownToggle} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
     declarations: [NavbarComponent],
@@ -13,8 +13,10 @@ import { TranslateModule } from '@ngx-translate/core';
     imports: [
         CommonModule,
         RouterModule,
-        MDBBootstrapModule,
-        TranslateModule
+        TranslateModule,
+        NgbDropdownAnchor,
+        NgbDropdownToggle,
+        NgbDropdownMenu
     ]
 })
 export class CoreModule { }

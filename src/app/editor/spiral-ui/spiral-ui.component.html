@@ -22,10 +22,10 @@
             <span (keyup)="changeValue(id, $event)" (blur)="updateList(id, $event)" contenteditable="true">{{line.words}}</span>
             <div class="row">
               <div class="col-md-6">
-                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeLine(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
+                <button type="button" class="btn btn-link btn-block text-white" (click)="removeLine(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
               </div>
               <div class="col-md-6">
-                <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateLine(line)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
+                <button type="button" class="btn btn-link btn-block text-white" (click)="duplicateLine(line)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
               </div>
             </div>
           </td>
@@ -53,10 +53,10 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="removeFile(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
+              <button type="button" class="btn btn-link btn-block text-white" (click)="removeFile(id)">({{ 'PAGES.SPIRAL_EDITOR.REMOVE' | translate }})</button>
             </div>
             <div class="col-md-6">
-              <button type="button" mdbBtn color="link" rounded="true" size="sm" class="btn-block text-white" (click)="duplicateFile(file)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
+              <button type="button" class="btn btn-link btn-block text-white" (click)="duplicateFile(file)">({{ 'PAGES.SPIRAL_EDITOR.DUPLICATE' | translate }})</button>
             </div>
           </div>
         </td>

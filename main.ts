@@ -1,5 +1,5 @@
 import { app, BrowserWindow, screen, webContents } from 'electron';
-import * as remote from '@electron/remote/main';
+import * as remote from '@electron/remote/main'
 import * as path from 'path';
 import * as url from 'url';
 

@@ -1,29 +1,26 @@
 <!--Navbar-->
 <div id="fractalBar">
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark" [containerInside]="false">
-
-    <!-- Navbar brand -->
-    <mdb-navbar-brand>&nbsp;</mdb-navbar-brand>
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <!-- Collapsible content -->
-    <links>
+    <div class="navbar-collapse">
 
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
 
             <!-- Dropdown -->
-            <li class="nav-item dropdown" dropdown>
-                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <li class="nav-item dropdown" ngbDropdownAnchor>
+                <a ngbDropdownToggle type="button" class="nav-link dropdown-toggle waves-light">
                     {{ 'PAGES.NAVBAR.FILE' | translate }}<span class="caret"></span></a>
-                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="projectManager.initSave()">{{ 'PAGES.NAVBAR.SAVE_PROJECT' | translate }}</a>
+                <div ngbDropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu">
+                    <a class="dropdown-item waves-light" href="javascript:///" (click)="projectManager.initSave()">{{ 'PAGES.NAVBAR.SAVE_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider" *ngIf="projectManager.nextAction !== 'home'"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="goToMenu()" *ngIf="projectManager.nextAction !== 'home'">{{ 'PAGES.NAVBAR.RETURN_PROJECT_MENU' | translate }}</a>
+                    <a class="dropdown-item waves-light" href="javascript:///" (click)="goToMenu()" *ngIf="projectManager.nextAction !== 'home'">{{ 'PAGES.NAVBAR.RETURN_PROJECT_MENU' | translate }}</a>
 <!--                    <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.NEW_PROJECT' | translate }}</a>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="#">{{ 'PAGES.NAVBAR.OPEN_PROJECT' | translate }}</a>
                     <div class="divider dropdown-divider"></div> -->
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/">{{ 'PAGES.NAVBAR.CLOSE_PROJECT' | translate }}</a>
+                    <a class="dropdown-item waves-light" routerLink="/">{{ 'PAGES.NAVBAR.CLOSE_PROJECT' | translate }}</a>
                     <!-- <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="electronService.app.quit()">{{ 'PAGES.NAVBAR.QUIT' | translate }}</a> -->
                 </div>
@@ -31,8 +28,8 @@
 
         </ul>
 
-    </links>
+    </div>
     <!-- Links -->
-</mdb-navbar>
+</div>
 <!--/.Navbar-->
 </div>

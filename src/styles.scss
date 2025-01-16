@@ -11,3 +11,6 @@ html, body {
 router-outlet, swirl-text, app-swirl, swirl-internal-images{
 
 }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

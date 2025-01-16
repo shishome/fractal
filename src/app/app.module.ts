@@ -16,8 +16,8 @@ import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import {SwirlModule} from "./swirl/swirl.module";
 import {EditorModule} from "./editor/editor.module";
-import {MDBBootstrapModule} from "angular-bootstrap-md";
 import { CreditsComponent } from './credits/credits.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -36,14 +36,14 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     EditorModule,
     SwirlModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,10 +5,10 @@
         <input [(ngModel)]="projectManager.projectData.name" name="projectDataName" contenteditable="true" style="background: darkslategray; color: white; border: none; border-bottom: 1px gray solid; width: 50%">
     </h2>
     <hr>
-    <div dropdown>
-        <a dropdownToggle href="javascript:///" class="btn btn-success">{{ 'PAGES.PROJECT_HOME.NEW_SESSION' | translate }}</a>
+    <div>
+        <a href="javascript:///" class="btn btn-success">{{ 'PAGES.PROJECT_HOME.NEW_SESSION' | translate }}</a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" style="z-index: 1000" role="menu" style="padding-right: 10px;">
-            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///" (click)="newSessionRandom()">
+            <a class="dropdown-item waves-light" href="javascript:///" (click)="newSessionRandom()">
                 <div class="row">
                     <div class="col-1">
                         <i class="bi bi-patch-question-fill list-icon"></i>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///">
+            <a class="dropdown-item waves-light" href="javascript:///">
                 <div class="row">
                     <div class="col-1">
                         <i class="bi bi-card-list list-icon"></i>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="javascript:///">
+            <a class="dropdown-item waves-light" href="javascript:///">
                 <div class="row">
                     <div class="col-1">
                         <i class="bi bi-card-checklist list-icon"></i>

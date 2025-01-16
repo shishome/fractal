@@ -5,7 +5,6 @@ import { EditorRoutingModule } from './editor-routing.module';
 
 import { SpiralUiComponent } from './spiral-ui/spiral-ui.component';
 import { SharedModule } from '../shared/shared.module';
-import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {CoreModule} from "../core/core.module";
 import { ProjectIndexComponent } from './project-index/project-index.component';
 
@@ -14,6 +13,6 @@ import { ProjectIndexComponent } from './project-index/project-index.component';
       SpiralUiComponent,
       ProjectIndexComponent,
   ],
-  imports: [CommonModule, SharedModule, EditorRoutingModule, MDBBootstrapModule.forRoot(), CoreModule]
+  imports: [CommonModule, SharedModule, EditorRoutingModule, CoreModule]
 })
 export class EditorModule {}
